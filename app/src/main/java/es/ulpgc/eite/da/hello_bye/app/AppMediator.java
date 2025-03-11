@@ -1,12 +1,14 @@
 package es.ulpgc.eite.da.hello_bye.app;
 
 
+import es.ulpgc.eite.da.hello_bye.bye.ByeState;
 import es.ulpgc.eite.da.hello_bye.hello.HelloState;
 
 public class AppMediator {
 
     private static AppMediator INSTANCE;
     private HelloState helloState;
+    private ByeState byeState;
     private HelloToByeState helloToByeState;
     private ByeToHelloState byeToHelloState;
 
@@ -33,8 +35,16 @@ public class AppMediator {
         return helloState;
     }
 
+    public ByeState getByeState() {
+        return byeState;
+    }
+
     public void setHelloState(HelloState state) {
         this.helloState = state;
+    }
+
+    public void setByeState(ByeState state) {
+        this.byeState = state;
     }
 
     public HelloToByeState getHelloToByeState() {

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import es.ulpgc.eite.da.hello_bye.R;
+import es.ulpgc.eite.da.hello_bye.bye.ByeActivity;
 
 
 public class HelloActivity
@@ -82,7 +83,8 @@ public class HelloActivity
 
     @Override
     public void navigateToByeScreen() {
-
+        Intent intent = new Intent(this, ByeActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -1,13 +1,27 @@
 package es.ulpgc.eite.da.hello_bye;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.test.core.app.ActivityScenario;
+import androidx.test.core.app.ApplicationProvider;
+
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import es.ulpgc.eite.da.hello_bye.app.AppMediator;
+import es.ulpgc.eite.da.hello_bye.app.ByeToHelloState;
+import es.ulpgc.eite.da.hello_bye.app.HelloToByeState;
+import es.ulpgc.eite.da.hello_bye.bye.ByeActivity;
+import es.ulpgc.eite.da.hello_bye.bye.ByeState;
 
 //@RunWith(AndroidJUnit4.class)
 @RunWith(RobolectricTestRunner.class)
@@ -21,7 +35,7 @@ public class ByeActivityTests {
         AppMediator.resetInstance();
     }
 
-    /*
+
 
     @Test
     public void test01StartActivityWithNullState() {
@@ -376,5 +390,5 @@ public class ByeActivityTests {
         });
     }
 
-    */
+
 }
